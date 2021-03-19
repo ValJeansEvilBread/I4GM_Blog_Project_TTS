@@ -1,0 +1,12 @@
+.jumbotron {
+  background-image:url(https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png); 
+  padding: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: -40px;
+  background-attachment: fixed;
+  background-position:  center -238px;
+  
+
+}

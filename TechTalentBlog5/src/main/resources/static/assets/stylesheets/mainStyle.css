@@ -1,0 +1,47 @@
+.jumbotron {
+  background-image:url(https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position:  center -238px;
+}
+
+
+#headertext{
+  color: #732d96;
+  font-family: Georgia;
+}
+
+
+h5{
+  color: #732d96;
+}
+
+#jumbomaintext{
+  color: #732d96;
+  text-shadow: 3px 3px 5px gold;
+  font-family: Georgia;
+  font-size: 60px;
+}
+
+#disclaimer_yellow{
+  color: gold;
+  text-shadow: 3px 3px 5px #732d96;
+  font-family: Georgia;
+}
+
+.container22{
+  background-color: #D5CEDE;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px; 
+}
+
+#centercontainer{
+  text-align: center;
+}
+
+#centerinner {
+  display: inline-block;
+}

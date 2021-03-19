@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>I4GM - You Reported Yourself!</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    <div class="container">
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+      <div class="col-md-11">
+        <br>
+        <h2 id="headertext">I4GM</h2>
+        <p  id="headertext">Totally maybe not a trap created by a microstate-affiliated intelligence agency.</p>
+    </div>
+  </div>
+
+   <div th:replace="fragments/navbar :: navbar" ></div>
+
+
+
+    <div style="margin: 70px">
+      <h3 id="headertext">Success!</h3>
+      <p>Thank you for your submission! Authorities will be notified shortly to congratulate you.</p>
+      <div class="row">
+
+        <div class="col-md-6">
+          <h5 id="headertext">Your Post:</h5>
+          <div style="padding: 25px">
+            <div class="card" style="width: 95%;">
+              <div class="card-body">
+                <h5 class="card-title" th:text="${title}"/>
+                <h6 h6 class="card-subtitle mb-2 text-muted">by:</h6>
+                <h6 h6 class="card-subtitle mb-2 text-muted" th:text="${author}"/>
+                <p class="card-text" th:text="${blogEntry}" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+
+      <a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a>
+      <a th:href="@{/blog_posts/new}"><button class= "btn btn-primary">Submit a New Blog Post</button></a>
+
+
+      
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div th:replace="/fragments/footer :: footer" ></div>
+    
+    </div>
+
+    <div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+  
+</html>

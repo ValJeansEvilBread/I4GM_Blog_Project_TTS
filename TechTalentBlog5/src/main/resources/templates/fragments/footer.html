@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Blog Project</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+</head>
+<body>
+
+  <div th:fragment="footer">
+
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p> © Sally Sea Shell Corp. 2020 - a <del>Miguel Palima</del> Random Guy's <del>Shell</del> Legit Company. </p>
+        </div>
+        <div class="col-md-4" id="centercontainer">
+          <div id="centerinner">
+              <ul class="nav nav-pills" >
+                <li><a th:href="@{/}">Home &#124;</span></a></li>
+                <li><a href="#">Contact Us &#124; </a></li>
+                <li><a href="#">Other Domain Mirrors &#124; </a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="text-right"><a href="#">Follow Us (Into a New Era). Or don't. Whatever.</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <div th:replace="/fragments/styling :: body-links" ></div>
+</body>
+</html>

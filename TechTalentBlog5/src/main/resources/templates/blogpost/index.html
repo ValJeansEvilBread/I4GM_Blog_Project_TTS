@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+  <head>
+    <title>I4GM Home</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    	<div class="row">
+    		<div class="col-md-1">
+    		</div>
+    	    <div class="col-md-11">
+    		  	<br>
+    		    <h1 id="headertext">Ideas for Global Mayhem  <span class="badge badge-pill badge-secondary"><h6>.pw mirror</h6></span></h1>
+    		    <p  id="headertext">A source of diabolical inspiration to balance out all the blogs that try to make the world a better place.</p>
+    		</div>
+    	</div>
+
+       <div th:replace="fragments/navbar :: navbar" ></div>
+
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <div id="jumbomaintext">Ideas for Global Mayhem</div>
+            <div class="container-fluid mission">
+              <div>
+
+                <div class="row">
+                  <h5 id="disclaimer_yellow">Please read the Legal Disclaimer before continuing.</h5>
+                </div>
+                <div class="order-button">
+                  <a href="#" class="btn btn-warning">Legal Disclaimer</a>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        
+        
+          <div class="row">
+            <div th:each="blog:${posts}" class="col-md-6">
+              <div style="padding: 25px">
+                <div class="card" style="width: 95%;">
+                  <div class="card-body">
+                    <h5 class="card-title" th:text="${blog.title}"/>
+                    <h6 h6 class="card-subtitle mb-2 text-muted">by: <span><i class="card-subtitle mb-2 text-muted" th:text="${blog.author}"/></span></h6>
+                    <p class="card-text" th:text="${blog.blogEntry}" />
+                    <div class="panel-footer">
+                      <!-- Link to Update -->
+                      <!-- Link to Show  -->
+                      <!--  Link to Destroy -->
+                      <!-- Buttons -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!--
+
+        <div>
+          <form action="#" th:action="@{'/blog_posts/{id}'(id=${blog.id})}" th:method="delete"
+                          class="form-horizontal">
+            <div class="form-group">
+                <input type="hidden" name="_method" value="delete"/>
+            <button type="submit" class="btn btn-danger btn-block" th:text="Delete">Delete</button>
+            </div>
+          </form>
+        </div>
+
+        -->
+
+        <br>
+        <br>
+
+        <div class="row">
+
+    	    <div class="col-md-6" style="padding: 25px; padding-right: 50px">
+    	    	<center>
+    		        <div class="card" style="width: 95%;">
+                  <div class="card-body">
+                    <br>
+                    <br>
+                    <br>
+                    <center>
+    			           <a th:href="@{/blog_posts/new}"><button class= "btn btn-success">Post Your Idea!</button></a>
+                    </center>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
+                </div>
+    	    </center>
+    	   </div>
+
+    	    
+          <div class="col-md-6" style="padding: 25px; padding-left:50px">
+    	    	<div class="card" style="width: 95%;">
+              		<div class="card-body">
+              			<br>
+              			<br>
+              			<br>
+                		<center>
+    		    			<div class="order-button">
+    		      				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger" target="_blank">Don't Click This</a>
+    		    			</div>
+    					</center>
+    					<br>
+    					<br>
+    					<br>
+            		</div>
+    	    	</div>
+    		</div>
+
+    	</div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+    <div th:replace="/fragments/footer :: footer" ></div>
+
+
+    <div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+
+</html>

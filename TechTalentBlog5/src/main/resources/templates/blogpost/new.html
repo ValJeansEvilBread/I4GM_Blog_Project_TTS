@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>IG4M - Idea Submission</title>
+  <div th:replace="/fragments/styling :: head-style" ></div>
+</head>
+
+
+  <body>
+   <div class="container">
+
+	<div class="row">
+		<div class="col-md-1">
+		</div>
+	    <div class="col-md-11">
+		  	<br>
+		    <h1 id="headertext">Ideas for Global Mayhem  <span class="badge badge-pill badge-secondary"><h6>.pw mirror</h6></span></h1>
+		    <p  id="headertext">A source of diabolical inspiration to balance out all the blogs that try to make the world a better place.</p>
+		</div>
+	</div>
+
+   <div th:replace="fragments/navbar :: navbar" ></div>
+
+	<div class="row">
+
+      <div class="col-md-6">
+
+         	<div class="card" style="width: 95%;">
+	          	<div class="card-body">
+					<h5 class="card-subtitle mb-2 text-muted">Create a Post About Your Plot</h5>
+          <p class="card-subtitle mb-2 text-muted">You thought of a plan, now brag about it, ya diabolical genius! Regale the world with all the clever details.</p>
+			 		<form action="#" th:action="@{/blog_posts/new}" th:object="${blogPost}" method="post">
+			 		
+				 		<div class="form-group">
+				 			<input type="text" class="form-control" placeholder="Title for Idea" th:field="*{title}" />
+				 		</div>
+				 		
+				 		<div class="form-group">
+				 			<input type="text" class="form-control" placeholder="Your Name Here" th:field="*{author}" />
+				 		</div>
+				 		
+				 		<div class="form-group">
+				 			<input type="text" class ="form-control" placeholder="Idea Details" th:field="*{blogEntry}" />
+				 		</div>
+
+				 		<button class="btn btn-success">Submit Your Post</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<div class="col-md-6">
+	        <div class="card" style="width: 95%;">
+	          <div class="card-body">
+		            <h6 class="card-subtitle mb-2 text-muted">Terms and Conditions for Idea Submission</h6>
+		            <p class="card-text"><i>Hast du jemals etwas von der Tragödie von Darth Plagueis dem Weisen gehört? Das dachte ich mir. Es ist nicht die Art Geschichte, die ein Jedi erzählen würde. Es ist eine Legende der Sith. Darth Plagueis war ein dunkler Lord der Sith. So mächtig und so weise... dass er die Macht nutzen konnte, um die Midiclorianer zu beeinflussen... dass sie Leben erschufen. Er hatte ein so ungeheures Wissen um die dunkle Seite... dass er sogar dazu in der Lage war, das Sterben derjenigen... welche ihm nahe standen, verhindern zu können. Die dunkle Seite der Macht ist der Pfad zu mannigfaltigen Fähigkeiten... welche manche von uns für unnatürlich halten. Er wurde unglaublich mächtig. Das einzige, wovor er sich noch fürchtete, war... seine Macht zu verlieren. Was letztendlich natürlich auch geschah. Unglücklicherweise hatte er seinem Schüler alles beigebracht, was er wusste. Kurz darauf wurde er von seinem Schüler im Schlaf ermordet. Was für eine Ironie. Er konnte andere vor dem Tod retten... aber sich selbst konnte er nicht retten.</i></p>
+		       </div>
+	        </div>
+      	</div>
+
+	</div>
+
+
+	<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div th:replace="/fragments/footer :: footer" ></div>
+
+ </div>
+
+    <div th:replace="/fragments/styling :: body-links" ></div>
+
+</html>
